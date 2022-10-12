@@ -1,0 +1,50 @@
+---
+title: "curso_introduccion_R"
+output: html_document
+date: '2022-10-12'
+---
+#Primeros calculos en R y tipos de variables
+```{r}
+2+3
+
+2^3
+
+x<-86
+x=9 
+transporte=8
+platzi=10
+tiempo_total=transporte + platzi
+tiempo_total
+```
+
+Las variables en R se asignan con el simbolo igual o <-
+```{r}
+porcentaje1=0.3
+porcentaje2=0.3
+porcentaje3=0.4
+nota1=4
+nota2=3.5
+nota3=3
+nota_final=(porcentaje1*nota1)+(porcentaje2*nota2)+(porcentaje3*nota3)
+nota_final
+```
+Para ver la estructura de nuestro dataset de carros usamos el codigo:
+str(mtcars)
+```{r}
+str(mtcars)
+```
+Para ver la información del dataset usamos el comando ?mtcars
+```{r}
+?mtcars
+```
+Ahora podemos ver que tipo de variable es determinada columna del dataframe
+```{r}
+class(mtcars$model)
+```
+Podemos transformar variables de 0 y 1 en una variable logica como un booleano
+```{r}
+mtcars$vs=as.logical(mtcars$vs)
+mtcars$am=as.logical(mtcars$am)
+str(mtcars)
+```
+
